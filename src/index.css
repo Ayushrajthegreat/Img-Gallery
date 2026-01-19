@@ -742,6 +742,31 @@ button.upload-btn:disabled {
         width: 100%;
         border-left: none;
         border-top: 1px solid #333;
-        overflow: visible;
     }
+}
+
+/* Back Button */
+.back-btn {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.2rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    backdrop-filter: blur(4px);
+    transition: all 0.2s;
+    z-index: 100;
+}
+
+.back-btn:hover {
+    background: rgba(0, 0, 0, 0.8);
+    transform: translateX(-2px);
 }

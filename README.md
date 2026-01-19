@@ -1,16 +1,72 @@
-# React + Vite
+# ImgGallery
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive image gallery web application built with React and Supabase. This application allows users to browse a collection of images, upload their own, and download high-quality versions.
 
-Currently, two official plugins are available:
+![ImgGallery Demo](public/screenshots/demo.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## React Compiler
+-   **Image Gallery**: Browse a visually appealing grid of high-quality images.
+-   **Image Upload**: Seamlessly upload new images to the cloud storage.
+-   **Detailed View & Download**: Click on any image to view it in detail and access the download option.
+-   **Responsive Design**: Optimized for a great experience on both desktop and mobile devices.
+-   **Navigation**: Easy navigation between the gallery and upload pages.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Tech Stack
 
-## Expanding the ESLint configuration
+This project leverages a modern frontend stack for performance and developer experience:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+-   **Frontend**: [React 19](https://react.dev/) - A JavaScript library for building user interfaces.
+-   **Build System**: [Vite](https://vitejs.dev/) - Next Generation Frontend Tooling.
+-   **Routing**: [React Router v7](https://reactrouter.com/) - Client-side routing for seamless navigation.
+-   **Backend & Storage**: [Supabase](https://supabase.com/) - The open source Firebase alternative (PostgreSQL + Storage).
+-   **Icons**: [Lucide React](https://lucide.dev/) - Beautiful, consistent icons.
+-   **Styling**: Vanilla CSS - Custom, lightweight styling without external CSS frameworks.
+-   **Linting**: [ESLint](https://eslint.org/) - Pluggable linting utility for JavaScript and JSX.
+
+## 📦 Getting Started
+
+Follow these steps to set up the project locally.
+
+### Prerequisites
+
+-   Node.js (Latest LTS recommended)
+-   npm (comes with Node.js)
+
+### Installation
+
+1.  **Clone the repository**
+
+    ```bash
+    git clone <repository-url>
+    cd imggallery
+    ```
+
+2.  **Install dependencies**
+
+    ```bash
+    npm install
+    ```
+
+3.  **Run the development server**
+
+    ```bash
+    npm run dev
+    ```
+
+4.  **Open in Browser**
+
+    Open your browser and navigate to `http://localhost:5174` to view the application.
+
+## 📂 Project Structure
+
+-   `src/`: Application source code
+    -   `components/`: Reusable UI components
+    -   `App.jsx`: Main application component
+    -   `supabaseClient.js`: Supabase configuration
+-   `public/`: Static assets
+-   `index.html`: Entry HTML file
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.

@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom'
 import { supabase } from './supabaseClient'
-import { Download, Share2, Info, Loader2, HardDrive, Monitor, Smartphone, ChevronDown, Check } from 'lucide-react'
+import { Download, Share2, Info, Loader2, HardDrive, Monitor, Smartphone, ChevronDown, Check, ArrowLeft } from 'lucide-react'
 
 const QUALITIES = [
     { id: 'original', label: 'Original', icon: HardDrive, desc: 'Full Resolution' },
@@ -106,18 +106,24 @@ function DownloadPage() {
 
     const selectedQualityLabel = QUALITIES.find(q => q.id === selectedQuality)?.label || 'Original'
 
+    const navigate = useNavigate()
+
     if (loading) return <div className="loading-page"><Loader2 className="loader" /> Loading image details...</div>
     if (!image) return <div className="error-page">Image not found</div>
 
     return (
         <div className="download-page">
+            <button className="back-btn" onClick={() => navigate('/')}>
+                <ArrowLeft size={20} /> Back to Gallery
+            </button>
+
             <div className="dl-main-content">
                 <div className="dl-image-container">
                     <img src={image.public_url} alt={image.name} className="dl-image-preview" />
                 </div>
             </div>
 
-            <div className="dl-sidebar">
+            <div className="dl-sidebar glass-panel">
                 <div className="dl-sidebar-content">
                     <div className="dl-uploader-info">
                         <div className="dl-avatar">
@@ -188,7 +194,6 @@ function DownloadPage() {
                             <span className="dl-meta-label">Type</span>
                             <span className="dl-meta-value">JPG</span>
                         </div>
-                        {/* Note: In a real app we'd get real dimensions and type from metadata */}
                     </div>
 
                     <div className="dl-description">
